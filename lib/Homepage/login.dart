@@ -15,32 +15,44 @@ class _LoginState extends State<Login> {
 //          title: Text("Login"),
 //        ),
         body: Stack(
-          children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.white
-              )),
-            ListView(
-              children: <Widget>[
-                _buildForm(),
-              ],
-            ),
-          ],
-        ));
-  }
-  Widget _buildForm() => Card(
-    color: Colors.white,
-    child: Column(
       children: <Widget>[
-        _logo(),
+        Container(decoration: BoxDecoration(color: Colors.white)),
+        ListView(
+          children: <Widget>[
+            _buildForm(),
+          ],
+        ),
       ],
-    ),
-    );
+    ));
+  }
 
-  Widget _logo() => Image.asset(("assets/logo.jpg"),fit: BoxFit.contain,);
+  Widget _buildForm() => Card(
+        color: Colors.white,
+        child: Column(
+          children: <Widget>[
+            _logo(),
+            _loginbtn(),
+          ],
+        ),
+      );
+
+  Widget _logo() => Image.asset(
+        ("assets/logo.jpg"),
+        fit: BoxFit.contain,
+      );
+  Widget _loginbtn() => Container(
+    width: MediaQuery.of(context).size.width,
+    child: RaisedButton(
+      color: Colors.blue,
+      onPressed: _onPressed,
+      child: Text(
+        "Login".toUpperCase(),
+        style: TextStyle(color: Colors.white),
+      ),
+    ),
+  );
 
   void _onPressed() {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Register()));
+   Navigator.pushReplacementNamed(context, '/register');
   }
 }
