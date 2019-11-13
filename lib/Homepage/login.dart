@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nutrition_app/Homepage/register.dart';
+import 'package:nutrition_app/FoodFrequency/page1.dart';
+import 'package:nutrition_app/uidata.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -41,18 +42,18 @@ class _LoginState extends State<Login> {
         fit: BoxFit.contain,
       );
   Widget _loginbtn() => Container(
-    width: MediaQuery.of(context).size.width,
-    child: RaisedButton(
-      color: Colors.blue,
-      onPressed: _onPressed,
-      child: Text(
-        "Login".toUpperCase(),
-        style: TextStyle(color: Colors.white),
-      ),
-    ),
-  );
+        width: MediaQuery.of(context).size.width,
+        child: RaisedButton(
+          color: Colors.blue,
+          onPressed: _onPressed,
+          child: Text(
+            UIData.login.toUpperCase(),
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+      );
 
   void _onPressed() {
-   Navigator.pushReplacementNamed(context, '/register');
+    Navigator.pushReplacementNamed(context, '/page1');
   }
 }

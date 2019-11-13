@@ -14,7 +14,7 @@ packages:
       name: bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "2.0.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -29,13 +29,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.2"
-  cloud_firestore:
-    dependency: "direct main"
-    description:
-      name: cloud_firestore
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.13+1"
   collection:
     dependency: transitive
     description:
@@ -50,13 +43,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.2"
-  firebase_core:
-    dependency: transitive
-    description:
-      name: firebase_core
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.4"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -68,7 +54,7 @@ packages:
       name: flutter_bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "2.0.0"
   flutter_platform_widgets:
     dependency: "direct main"
     description:
@@ -150,7 +136,7 @@ packages:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.22.4"
+    version: "0.22.6"
   sky_engine:
     dependency: transitive
     description: flutter
